@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <%- include("partials/_header") -%>
 
   <body>
@@ -11,7 +13,7 @@
           <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
               <div class="page-heading">
-                <h1>Contact Me</h1>
+                <h1>New Post</h1>
 
               </div>
             </div>
@@ -23,20 +25,20 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
-            <form novalidate>
+            <form method="POST" action="/new-post">
               <div class="control-group">
                 <div class="form-group floating-label-form-group controls">
-                  <label>Message Title</label>
-                  <input type="text" class="form-control" placeholder="Name" id="name" required
-                    data-validation-required-message="Please enter your name.">
+                  <label>Post Tittle</label>
+                  <input name="title" type="text" class="form-control" placeholder="Post Title" id="name" required
+                    data-validation-required-message="Please enter tittle.">
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
               <div class="control-group">
                 <div class="form-group floating-label-form-group controls">
-                  <label>Message Detail</label>
-                  <textarea rows="5" class="form-control" placeholder="Message" id="message" required
-                    data-validation-required-message="Please enter a message."></textarea>
+                  <label>Post Context</label>
+                  <textarea name="body" rows="5" class="form-control" placeholder="Post Context" id="message" required
+                    data-validation-required-message="Please enter body."></textarea>
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
@@ -48,7 +50,7 @@
         </div>
       </div>
 
-      <hr>
+      <hr />
 
       <%- include("partials/_footer") -%>
 
@@ -58,4 +60,4 @@
 
   </body>
 
-  </html>
+</html>
